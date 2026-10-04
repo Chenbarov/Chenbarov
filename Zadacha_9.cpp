@@ -33,7 +33,7 @@ int main() {
 
     cout << "Введите скорость полета V (м/с): "; 
     cin >> V;
-    cout << "Введите плотность воздуха rho (кг/м³): "; 
+    cout << "Введите плотность воздуха rho (кг/м^3): "; 
     cin >> rho;
 
     vector<Aircraft> configs(num_configs);
@@ -45,7 +45,7 @@ int main() {
         cout << "\n" << configs[i].name << ":\n";
         cout << "  Масса m (кг): "; 
         cin >> configs[i].mass;
-        cout << "  Площадь крыла S (м²): "; 
+        cout << "  Площадь крыла S (м^2): "; 
         cin >> configs[i].wing_area;
         cout << "  Тяга T (Н): "; 
         cin >> configs[i].thrust;
@@ -75,7 +75,7 @@ int main() {
         cout << configs[i].name
             << " | Подъемная сила: " << configs[i].lift << " Н"
             << " | Сопротивление: " << configs[i].drag << " Н"
-            << " | Ускорение a: " << configs[i].accel_x << " м/с²\n";
+            << " | Ускорение a: " << configs[i].accel_x << " м/с^2\n";
     }
 
     cout << "\nЛидер по ускорению: " << configs[leader_idx].name
